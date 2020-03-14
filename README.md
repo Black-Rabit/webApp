@@ -1,24 +1,14 @@
-# webapp
+# 说明
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+- vue2 + vuex的旅游网站小项目，代码不多，但麻雀虽小却五脏俱全
+- 该项目下现有4个页面，主页，详情页，城市跳转页，登录界面
+- 并且涉及到了vue全家桶的各个方面 
+	1. vue-cli快速搭建
+	2. 做了无限适配（rem）和初始化样式(reset.css)和移动端的点击延迟(fastclick)，弹性布局可适应各种大小手机屏
+	3. 用了vuex+本地存储来实现本地记忆登录的账号密码，以及根据所选城市来展示页面。
+	4. 除了主页外用的懒加载，按需加载。
+	5. 在不同页面的根组件下通过axios数据请求，向下分发数据，实现一次请求多次使用
+	6. 大量使用created mounted actived等钩子函数来做传值和逻辑业务
+	7. swiper，秒杀插件等使用，中间手写了个scroll效果的组件
+- 因为不会写后台，所以数据是提前写好的JSON格式数据，接口是基于webpack实现的get方式请求的接口
+- 等到后面（本人暂时不会写接口，上述JSON文件都是拿别人接口复制过来的，数据较少没法做），会做一些像是大量使用ES6语法，来实现数据筛选类，然后根据不同模块的需求带参按需new这个数据类创建实例拿去所需数据，从而达到对从接口那拿到的庞大的数据的一个过滤，使逻辑业务更加严谨和简洁，解决过度依赖vuex的问题等等。
